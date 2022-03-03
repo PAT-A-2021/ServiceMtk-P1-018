@@ -7,6 +7,10 @@ using System.Text;
 
 namespace ServiceMtk_P1_20190140018
 {
+    /// <summary>
+    /// main class
+    /// </summary>
+    /// <remarks>interface IMatematika   membuat exception dari Tambah, Kurang, Kali, Bagi </remarks>
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IMatematika
@@ -29,6 +33,10 @@ namespace ServiceMtk_P1_20190140018
         Koordinat TKoordinat(Koordinat a, Koordinat b); //object dari class
     }
 
+    /// <summary>
+    /// class MathFault
+    /// </summary>
+    /// <remarks>class MathFault membuat string (Kode dan Pesan) yang akan digunakan untuk pesan error dan untuk meloloskan pesan error</remarks>
     [DataContract]
     //Tambahkan kelas berikut 
     class MathFault
@@ -38,6 +46,11 @@ namespace ServiceMtk_P1_20190140018
         [DataMember]
         public string Pesan { get; set; }
     }
+
+    /// <summary>
+    /// class Koordinat
+    /// </summary>
+    /// <remarks>class Koordinat membuat koordinat hasil dari Tambah, Kurang, Kali, Bagi</remarks>
     public class Koordinat
     {
         private int _x, _y; //atribut
